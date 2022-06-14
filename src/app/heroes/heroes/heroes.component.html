@@ -1,0 +1,39 @@
+<section class="heroes-list">
+  <ng-template ngFor let-hero [ngForOf]="getHeroes">
+
+      <a [routerLink]="['hero-page', hero.id]" class="hero-card">
+        <section class="hero-image">
+          <img [src]="hero.images.sm" alt="">
+        </section>
+
+        <section class="hero-info">
+          <h2 class="hero-name">{{ hero.name }}</h2>
+
+          <div class="hero-status">
+            <ul class="status-list">
+              <li>
+                Inteligência: {{ hero.powerstats.intelligence }}
+              </li>
+              <li>
+                Força: {{ hero.powerstats.strength }}
+              </li>
+              <li>
+                Velocidade: {{ hero.powerstats.speed }}
+              </li>
+              <li>
+                Durabilidade: {{ hero.powerstats.durability }}
+              </li>
+              <li>
+                Poder:  {{ hero.powerstats.power }}
+              </li>
+              <li>
+                Combate: {{ hero.powerstats.combat }}
+              </li>
+            </ul>
+          </div>
+
+        </section>
+      </a>
+
+  </ng-template>
+</section>

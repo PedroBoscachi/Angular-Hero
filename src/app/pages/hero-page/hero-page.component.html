@@ -1,0 +1,56 @@
+<app-heroes-header></app-heroes-header>
+<main>
+  <section class="hero-card">
+
+    <div class="hero-image">
+      <img [src]="hero.images.sm" alt="" />
+    </div>
+
+    <div class="hero-title">
+
+      <div class="hero-name">
+        <h1>{{ hero.name }}</h1>
+      </div>
+
+      <div class="hero-alignment">
+        <h2>Alinhamento: {{ hero.biography.alignment }}</h2>
+      </div>
+
+    </div>
+
+    <div class="hero-appearance">
+      <h2>Aparência</h2>
+      <ul class="appearance-list">
+        <li>Gênero: {{ hero.appearance.gender }}</li>
+        <li>Raça: {{ hero.appearance.race }}</li>
+        <li>Altura: {{ hero.appearance.height }}</li>
+        <li>Peso: {{ hero.appearance.weight }}</li>
+        <li>Cor do olho: {{ hero.appearance.eyeColor }}</li>
+        <li>Cor do cabelo: {{ hero.appearance.hairColor }}</li>
+      </ul>
+    </div>
+
+    <div class="hero-powerstats">
+      <h2>Status</h2>
+      <ul class="powerstats-list">
+        <li class="powerstats-item">Inteligência: {{ hero.powerstats.intelligence }}</li>
+        <li class="powerstats-item">Força: {{ hero.powerstats.strength }}</li>
+        <li class="powerstats-item">Velocidade: {{ hero.powerstats.speed }}</li>
+        <li class="powerstats-item">Durabilidade: {{ hero.powerstats.durability }}</li>
+        <li class="powerstats-item">Poder: {{ hero.powerstats.power }}</li>
+        <li class="powerstats-item">Combate: {{ hero.powerstats.combat }}</li>
+      </ul>
+    </div>
+
+    <div class="heroes-button">
+      <a class="button-link" [routerLink]="['']">
+        <button class="button">Voltar</button>
+      </a>
+    </div>
+
+
+  </section>
+
+</main>
+
+<app-heroes-footer></app-heroes-footer>
