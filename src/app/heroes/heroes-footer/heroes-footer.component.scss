@@ -1,0 +1,15 @@
+@import '../../../css-config/px-to-rem.scss';
+
+.container {
+  height: 8vh;
+  width: 100%;
+  background-color: #FFFFFF;
+  margin-top: rem-calc(20);
+}
+
+.footer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
