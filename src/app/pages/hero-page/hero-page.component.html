@@ -13,7 +13,11 @@
       </div>
 
       <div class="hero-alignment">
-        <h2>Alinhamento: {{ hero.biography.alignment }}</h2>
+        <p>
+          Seu verdadeiro nome é {{ hero.biography.fullName }}, nascido em {{ hero.biography.placeOfBirth }}.
+          Foi criado e publicado pela editora {{ hero.biography.publisher }}, sendo sua primeira
+          aparição em {{ hero.biography.firstAppearance }}.
+        </p>
       </div>
 
     </div>

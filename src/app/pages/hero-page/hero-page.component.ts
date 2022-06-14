@@ -21,12 +21,6 @@ export class HeroPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHero
-    /* const id = this.activatedRoute.snapshot.params['id'];
-    const hero = this.heroService.buscarPorId(`${this.apiIdUrl}/${id}`).subscribe(
-      res => {
-        this.hero = res;
-      }
-    ); */
   }
 
   get getHero() {

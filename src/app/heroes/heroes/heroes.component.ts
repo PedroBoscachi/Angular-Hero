@@ -1,10 +1,6 @@
-import { HeroService } from './../../service/hero.service';
-import { environment } from './../../../environments/environment';
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-
+import { HeroService } from './../../service/hero.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-heroes',
@@ -14,17 +10,25 @@ import { map, tap } from 'rxjs/operators';
 export class HeroesComponent implements OnInit {
 
   public getHeroes: any;
-  public getHeroId = environment.heroIdURL;
-  public heroid: any;
+  public findHero: any;
 
   constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
     this.heroService.listHeroes.subscribe(
       res => {
-        this.getHeroes = res;
+        this.findHero = res;
+        this.getHeroes = this.findHero;
       }
     )
+  }
+
+  public findHeroByName(heroName: string){
+    const filter = this.findHero.filter( (hero: any) => {
+      return !hero.name.toLowerCase().indexOf(heroName.toLowerCase());
+    });
+
+    this.getHeroes = filter;
   }
 
 }
