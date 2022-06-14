@@ -4,11 +4,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroesHeaderComponent } from './heroes-header/heroes-header.component';
 import { HeroesFooterComponent } from './heroes-footer/heroes-footer.component';
+import { HeroesFindComponent } from './heroes-find/heroes-find.component';
 
 
 
 @NgModule({
-  declarations: [HeroesComponent, HeroesHeaderComponent, HeroesFooterComponent],
+  declarations: [HeroesComponent, HeroesHeaderComponent, HeroesFooterComponent, HeroesFindComponent],
   imports: [
     CommonModule,
     RouterModule
@@ -16,7 +17,8 @@ import { HeroesFooterComponent } from './heroes-footer/heroes-footer.component';
   exports: [
     HeroesComponent,
     HeroesFooterComponent,
-    HeroesHeaderComponent
+    HeroesHeaderComponent,
+    HeroesFindComponent
   ]
 })
 export class HeroesModule { }
